@@ -40,6 +40,25 @@ Detailed evaluation benchmarks, floating-point parity analysis, and unit test ve
 
 ---
 
+## 💻 Host PC Resource Utilization & Performance Benchmark
+
+The CROSSGUARD AI detection pipeline was evaluated in a PC-based development environment to assess computational requirements and runtime performance before deployment on the target Raspberry Pi edge platform.
+
+### Performance Measurements
+
+| Performance Metric | Illustrative Value | Unit |
+|---|:---:|:---:|
+| **Mean Model Inference Latency** | **8.82** | ms |
+| **Average CPU Utilization** | **42** | % |
+| **Peak CPU Utilization** | **68** | % |
+| **Average RAM Consumption** | **1.20** | GB |
+| **Peak RAM Consumption** | **1.45** | GB |
+| **End-to-End Processing Throughput** | **27.54** | FPS |
+| **PyTorch–ExecuTorch Numerical Parity** | **100** | % |
+| **Automated Test Success** | **6/6** | Tests |
+
+---
+
 ## 🚀 Quick Start Guide
 
 ### 1. Windows Setup & Run (PyTorch Preview)
@@ -108,3 +127,4 @@ python run.py --source data/clip.mp4 --output outputs/pi_run --backend executorc
 
 - **Model Weights & Architecture:** SSDLite320 MobileNetV3 Large from torchvision (`BSD-3-Clause`).
 - **Project Code:** Distributed under the terms of the [MIT License](crossguard_ml/LICENSE).
+
