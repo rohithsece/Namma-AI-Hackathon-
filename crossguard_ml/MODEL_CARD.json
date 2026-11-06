@@ -1,0 +1,102 @@
+{
+  "name": "CROSSGUARD AI detection baseline",
+  "architecture": "torchvision SSDLite320 MobileNetV3 Large",
+  "weight_origin": "SSDLite320_MobileNet_V3_Large_Weights.COCO_V1",
+  "training_status": "Upstream pretrained COCO weights, unchanged. No project-specific training.",
+  "custom_training_data_supplied": false,
+  "organiser_model_approval": "unverified",
+  "source_url": "https://download.pytorch.org/models/ssdlite320_mobilenet_v3_large_coco-a79551df.pth",
+  "checkpoint": {
+    "path": "models/ssdlite320_mobilenet_v3_large_coco.pth",
+    "bytes": 14069355,
+    "sha256": "a79551df90c79834bcd3bb3845ef9d966b5449a3a9b2833ae8404778ca5d65d2"
+  },
+  "executorch": {
+    "path": "models/crossguard_ssdlite_fp32.pte",
+    "bytes": 13849608,
+    "sha256": "93bc05ab5b4b4c9bb48d0c8e265e28b3163f5f999a0c6e5a442be15164de2dd8",
+    "backend": "XNNPACK",
+    "precision": "FP32"
+  },
+  "input": {
+    "shape": [
+      1,
+      3,
+      320,
+      320
+    ],
+    "dtype": "float32",
+    "color": "RGB",
+    "range": [
+      0,
+      1
+    ],
+    "normalization_inside_model": {
+      "mean": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "std": [
+        0.5,
+        0.5,
+        0.5
+      ]
+    }
+  },
+  "output": {
+    "boxes_shape": [
+      3234,
+      4
+    ],
+    "format": "xyxy pixels in 320x320 coordinate system",
+    "scores_shape": [
+      3234,
+      6
+    ],
+    "score_columns": [
+      "person",
+      "bicycle",
+      "car",
+      "motorcycle",
+      "bus",
+      "truck"
+    ]
+  },
+  "default_postprocessing": {
+    "confidence": 0.45,
+    "nms_iou": 0.55,
+    "per_class_candidates": 300,
+    "max_detections": 100
+  },
+  "validation": {
+    "export_runtime_load": true,
+    "numerical_parity_random_inputs": true,
+    "real_image_parity": true,
+    "public_photos": 2,
+    "unit_tests_passed": 6,
+    "raspberry_pi_tested": false,
+    "organiser_input_tested": false,
+    "road_accuracy_measured": false
+  },
+  "published_reference_only": {
+    "box_mAP_COCO_val2017_all_original_categories": 21.3,
+    "source": "https://docs.pytorch.org/vision/main/models/generated/torchvision.models.detection.ssdlite320_mobilenet_v3_large.html",
+    "note": "Upstream published result; not reproduced here and not a six-class road-scene score."
+  },
+  "limitations": [
+    "Small/distant/occluded objects may be missed",
+    "No unique traffic tracking",
+    "Zone co-occupancy is a heuristic, not collision prediction",
+    "No INT8 calibration or target Pi benchmark"
+  ],
+  "test_environment": {
+    "torch": "2.15.0",
+    "torchvision": "0.29.2",
+    "executorch": "1.5.1",
+    "numpy": "2.3.5",
+    "opencv-python-headless": "5.0.0.93",
+    "pycocotools": "2.0.11",
+    "pytest": "9.2.0"
+  }
+}

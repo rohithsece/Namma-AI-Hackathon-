@@ -1,0 +1,18 @@
+{
+  "passed": true,
+  "samples": [
+    {
+      "image": "bus_india_cc0.jpg",
+      "max_box_abs_error": 0.0001888275146484375,
+      "max_score_abs_error": 1.6093254089355469e-06,
+      "detection_classes_match": true
+    },
+    {
+      "image": "crosswalk_cc0.jpg",
+      "max_box_abs_error": 0.0001983642578125,
+      "max_score_abs_error": 2.205371856689453e-06,
+      "detection_classes_match": true
+    }
+  ],
+  "note": "Parity only, no accuracy ground truth supplied."
+}

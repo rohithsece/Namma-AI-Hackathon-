@@ -1,0 +1,29 @@
+{
+  "video_sampling_and_limit": {
+    "passed": true,
+    "input": "Temporary 2-second,20-frame public-photo slideshow, software test only",
+    "stride": 3,
+    "limit": 4,
+    "actual_frames": [
+      0,
+      3,
+      6,
+      9
+    ]
+  },
+  "zero_detection_image": {
+    "passed": true,
+    "detailed_record_saved": true,
+    "all_six_counts_zero": true
+  },
+  "real_photo_outputs": {
+    "passed": true,
+    "records": 2,
+    "images_saved": 2
+  },
+  "optional_training_pipeline": {
+    "passed": true,
+    "scope": "One optimizer batch and validation/checkpoint save on temporary software fixtures. Pseudo training labels; not a meaningful custom model or benchmark. Resulting weights excluded from deliverable."
+  },
+  "target_pi_tested": false
+}

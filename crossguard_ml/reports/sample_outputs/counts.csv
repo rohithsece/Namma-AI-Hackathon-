@@ -1,0 +1,3 @@
+source,frame_index,timestamp_seconds,person,bicycle,car,motorcycle,bus,truck,potential_conflict,inference_ms
+bus_india_cc0.jpg,0,,0,0,0,0,1,0,,8.304568999960793
+crosswalk_cc0.jpg,1,,2,0,0,0,0,0,,9.338085000081264

@@ -1,0 +1,22 @@
+# Environments
+.venv/
+env/
+venv/
+ENV/
+
+# Python bytecode & caches
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Run outputs & temporary directories
+outputs/
+temp/
+tmp/
+
+# OS artifacts
+.DS_Store
+Thumbs.db

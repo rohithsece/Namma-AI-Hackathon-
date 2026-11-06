@@ -1,0 +1,6 @@
+# Tested on Python 3.12 / Linux x86_64. Use a 64-bit OS on Raspberry Pi.
+torch==2.15.0
+torchvision==0.29.2
+executorch==1.5.1
+numpy==2.3.5
+opencv-python-headless==5.0.0.93

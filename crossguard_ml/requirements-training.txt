@@ -1,0 +1,3 @@
+-r requirements.txt
+pycocotools==2.0.11
+pytest==9.2.0
